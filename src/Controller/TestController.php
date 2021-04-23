@@ -8,14 +8,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
+
+    // public function index()
+    // {
+    //     var_dump("ça fonctionne");
+    //     die();
+    // }
+
     /**
-     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", schemes="{"https", "http"}")
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", schemes={"http","https"})
      */
-    public function index()
-    {
-        var_dump("ça fonctionne");
-        die();
-    }
 
     public function test(Request $request, $age)
     {
@@ -35,10 +37,10 @@ class TestController
         // de notre route pour trouver le paramètre de route age : 
         // $age = $request->attributes->get('age');
         // 4. on peut substituer la ligne ci-dessus par la mise de $age en param de la fonction test(Request $request, $age)
-        dump($request);
+        // dump($request);
         return new Response("Vous avez $age ans.");
 
 
-        dd("vous avez $age ans");
+        // dd("vous avez $age ans");
     }
 }

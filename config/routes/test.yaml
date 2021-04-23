@@ -1,10 +1,10 @@
 # test:
 #   path: /test/{age<\d+>?0}
 #   controller: App\Controller\TestController::test
-#   # defaults : 
-#   #   age : 0
-#   # requirements :
-#   #   age: \d+
+#   defaults : 
+#     age : 0
+#   requirements :
+#     age: \d+
 #   methods: [POST, GET]
-# #   host: {subdomain}.monsite.com
+#   # host: localhost
 #   schemes: [https, http]
