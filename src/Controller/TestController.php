@@ -8,17 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
-
-    // public function index()
-    // {
-    //     var_dump("ça fonctionne");
-    //     die();
-    // }
+    /**
+     * @Route("/", name="index")
+     */
+    public function index()
+    {
+        dd("ça fonctionne");
+    }
 
     /**
      * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", schemes={"http","https"})
      */
-
     public function test(Request $request, $age)
     {
         // la ligne ci-dessous est remplacée pat Request $request en param de test
