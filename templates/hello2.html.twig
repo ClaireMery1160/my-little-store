@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	<h1>Hello 2 depuis template/hello2.html.twig</h1>
+	{# 
+		<h2>Nos formatrices</h2>
+				<p>{% include "_formatrices.html.twig" with {"formatrice":formatrice1} %}
+				</p>
+				<p>{% include "_formatrices.html.twig" with {"formatrice":formatrice2} %}
+				</p>
+			<h2>fonction render depuis hello()</h2> #}
+	{# <p>Hello, tu as {{age}}</p> #}
+	<p>tu t'appelles
+		{{prenom}}</p>
+{% endblock %}
+
+{% block title %}
+	Hello
+	{{prenom}}
+{% endblock %}

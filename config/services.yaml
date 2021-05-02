@@ -36,4 +36,7 @@ services:
     
     Cocur\Slugify\Slugify: ~
 
+    App\Taxes\Detector: 
+        arguments:
+            $seuil: 20
 
