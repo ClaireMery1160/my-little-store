@@ -1,0 +1,83 @@
+{% extends "base.html.twig" %}
+
+{% form_theme formView _self %}
+
+{% block title %}
+	Création d'un produit
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h1>Création d'un produit</h1>
+
+	{# {{ form(formView) }} #}
+
+	{# 1. Ceci gère l'affichage de la balise ouvrante du formulaire avec l'action, la méthode #}
+	{{ form_start(formView) }}
+	{# pour gérer les erreurs d'affichage du formulaire #}
+	{{ form_errors(formView) }}
+
+	<div class="row">
+
+		<div class="col">
+			{# 4. On va remplacer ce qui se trouve ci-dessous avec form_row par une syntaxe qui utilise 
+							l'attribut class qu'on passe en param de form #}
+			{# {{ form_row(formView.name) }} #}
+
+			{# normalement, un champ de form de bootstrap a la structure suivante :  #}
+			{# <div class="form-group">
+					<label for=""></label>
+					<input class="form-control">
+				</div> #}
+
+			{# donc on va reproduite ça en twig ci-dessous :  #}
+			{# {{ form_label(formView.name)}}
+				{{ form_widget(formView.name, {'attr':{'class':'form-control'}}) }} 
+				{{ form_errors(formView.name) }} 
+
+			{# 5. on ne conservera pas cette syntaxe ci-dessus, car on va utiliser ensuite
+			un élément plus performant avec nos form_row : form_theme  {% block form_row %}  #}
+
+				{{ form_row(formView.name) }}
+				{{ form_row(formView.price) }}
+				{{ form_row(formView.mainPicture) }}
+
+		</div>
+
+			<div class="col"> 
+				{{ form_row(formView.category) }}
+				{{ form_row(formView.shortDescription) }}
+			</div>
+
+	</div>
+
+		{# 2. Le form_widget, quand on lui passe un formulaire qui a des enfants, 
+				donc les champs, ça lui passe l'ensemble des champs #}
+		{# 
+				{{ form_widget(formView) }} #}
+
+		{# formWidget peut encore etre décomposé en form_row qui correspond à chaque champs, 
+				il suffit de passer le nom du champ saisi dans le controller
+				en propriété de formView. 
+				Je peux ainsi travailer si je veux entre les champs, ajouter du texte par ex. #}
+
+		{# {{ form_row(formView.name) }}
+					{{ form_row(formView.shortDescription) }}
+					{{ form_row(formView.price) }}
+					{{ form_row(formView.category) }} #}
+
+			<button type="submit" class="bnt btn-primary mt-2"> Créer le produit</button>
+
+		{# 3. balise de fin de formulaires, champs cachés quand on utilisera des token par ex. #}
+		{{ form_end(formView) }}
+	</div>
+{% endblock %}
+
+{# {% block form_row %}
+	<div class="form-group">
+		{{ form_label(form) }}
+		{{ form_widget(form, {'attr': {'class': 'form-control'} }) }}
+		{{ form_help(form) }}
+		{{ form_errors(form) }}
+	</div>
+{% endblock %} #}

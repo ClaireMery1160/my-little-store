@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{# {% form_theme formView _self %} #}
+{% block title %}
+	Edition de
+	{{ product.name }}
+{% endblock %}
+
+{% block body %}
+	<h1>Editez le produit
+		{{ product.name }}</h1>
+
+	<h3>
+		{{ product.shortDescription }}</h3>
+
+	<div class="container">
+		{{ form_start(formView) }}
+		{{ form_errors(formView) }}
+
+		<div class="row">
+
+			<div class="col">
+				{{ form_row(formView.name) }}
+				{{ form_row(formView.price) }}
+				{{ form_row(formView.mainPicture) }}
+			</div>
+
+			<div class="col">
+				{{ form_row(formView.category) }}
+				{{ form_row(formView.shortDescription) }}
+			</div>
+
+		</div>
+
+		<button type="submit" class="bnt btn-primary mt-2">
+			Editer le produit</button>
+
+		{{ form_end(formView) }}
+	</div>
+
+{% endblock %}
+
+
