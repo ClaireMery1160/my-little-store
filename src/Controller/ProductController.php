@@ -186,7 +186,7 @@ class ProductController extends AbstractController
             // dd($product);
             $em->flush();
 
-            $response = new Response();
+            // $response = new Response();
 
             // La partie ci-dessous peut être fusionnée avec la redirection dans la métode redirectToRoute()
             // $url = $urlGenerator->generate('product_show', [
