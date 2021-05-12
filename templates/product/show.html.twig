@@ -14,8 +14,7 @@
 				<a href="{{ path('homepage') }}">Home</a>
 			</li>
 			<li class="breadcrumb-item">
-				{# <a href="#">{{ product.category.name }}</a> <= Ceci est une mauvaise pratique, car on n'indique pas les routes en dur, mais avec urlGenerator #}
-				{# <a href="{{ urlGenerator.generate('product_category', { 'slug': product.category.slug }) }}">{{ product.category.name }}</a> <= tout ceci peut être remplacé par path(), une fonction de twig #}<a href="{{ path('product_category', { 'slug': product.category.slug }) }}"> </a>
+				<a href="{{ path('product_category', { 'slug': product.category.slug }) }}"> </a>
 				<a href="{{ path('product_category', {'slug': product.category.slug}) }}">{{ product.category.name }}</a>
 			</li>
 			<li class="breadcrumb-item active">{{ product.name }}</li>

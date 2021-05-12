@@ -57,39 +57,6 @@ class ProductType extends AbstractType
                     return strtoupper($category->getName());
                 }
             ]);
-
-        // $builder->get('price')->addModelTransformer(new CentimeTransformer);
-
-
-        // $builder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) {
-        //     $product = $event->getData();
-        //     if ($product->getPrice() !== null) {
-        //         $product->setPrice($product->getPrice() * 100);
-        //     }
-        // });
-
-        // $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
-        //     //dd($event);
-        //     $form = $event->getForm();
-
-        //     /**@var Product */
-        //     $product = $event->getData();
-        //     if ($product->getPrice() !== null) {
-        //         $product->setPrice($product->getPrice() / 100);
-        //     }
-        //dd($product);
-
-        // if ($product->getId() === null) {
-        //     $form->add('category', EntityType::class, [
-        //         'label' => 'Catégorie',
-        //         'placeholder' => '-- Choisir une catégorie --',
-        //         'class' => Category::class,
-        //         'choice_label' => function (Category $category) {
-        //             return strtoupper($category->getName());
-        //         }
-        //     ]);
-        // }
-        // });
     }
 
     public function configureOptions(OptionsResolver $resolver)
