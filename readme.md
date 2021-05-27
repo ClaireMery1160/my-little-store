@@ -1,6 +1,6 @@
 # My-little-store
 ***
-Projet en développement d'une simulation de butique en ligne construite en Symfony 5 et PHP 7.4. L'objectif est de créer une solution permettant de créer, modifier, afficher des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
+Projet en développement d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. L'objectif est de créer une solution permettant de créer, modifier, afficher des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
 ***
 ## Installation du projet en local depuis Github
 * modifier le fichier .env pour mettre à jour la connexion avec la bdd avec les paramètres de votre installation locale
