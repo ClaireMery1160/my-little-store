@@ -15,11 +15,33 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class CategoryController extends AbstractController
 {
+    
+    //// Partie 78 : appeler un controller directement depuis twig /////////////////////////////////
+    
+    protected $categoryRepository;
+
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository =  $categoryRepository;
+    }
+    
+    public function renderMenuList()
+    {
+            //1. aller chercher les catégories dans la base de données
+            $categories = $this->categoryRepository->findAll();
+            //2. renvoyer le rendu HTML sous la forme d'une reponse $this->render
+            return $this->render('category/_menu.html.twig', ['categories'=> $categories]);
+    }
+
     /**
      * @Route("/admin/category/create", name="category_create")
      */
+
     public function create(Request $request, EntityManagerInterface $em, SluggerInterface $slugger)
+
     {
+
+        
         $category = new Category;
 
         $form = $this->createForm(CategoryType::class, $category);
