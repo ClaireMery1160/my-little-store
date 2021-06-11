@@ -3,39 +3,19 @@
 namespace App\Controller;
 
 use App\Entity\Product;
-use App\Entity\Category;
 use App\Form\ProductType;
-use Doctrine\ORM\EntityManager;
 use App\Repository\ProductRepository;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Validator\Constraints\Length;
-use Symfony\Component\Validator\Constraints\LessThan;
-use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\String\Slugger\SluggerInterface;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
-use Symfony\Component\Validator\Constraints\Collection;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Validator\Constraints\GreaterThan;
-use Symfony\Component\Form\Extension\Core\Type\MoneyType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Validator\Constraints\LessThanOrEqual;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/{slug}", name="product_category")
+     * @Route("/{slug}", name="product_category", priority=-1)
      */
     public function category($slug, CategoryRepository $categoryRepo)
     {
@@ -76,7 +56,7 @@ class ProductController extends AbstractController
     /**
      * @Route("/admin/product/create", name="product_create")
      */
-    public function create(FormFactoryInterface $formFactory, Request $request, SluggerInterface $slugger, EntityManagerInterface $em)
+    public function create(Request $request, SluggerInterface $slugger, EntityManagerInterface $em)
     {
         $product = new Product;
         $form = $this->createForm(ProductType::class, $product);
@@ -102,7 +82,7 @@ class ProductController extends AbstractController
     /**
      * @Route("/admin/product/{id}/edit", name = "product_edit")
      */
-    public function edit($id, ProductRepository $productRepository, Request $request, EntityManagerInterface $em, ValidatorInterface $validator)
+    public function edit($id, ProductRepository $productRepository, Request $request, EntityManagerInterface $em)
     {
        
         $product = $productRepository->find($id);
@@ -113,7 +93,6 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) 
         {
-           // dd($form->getData());
             $em->flush();
             return $this->redirectToRoute('product_show', [
                 'category_slug' => $product->getCategory()->getSlug(),

@@ -6,17 +6,14 @@ use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class CategoryController extends AbstractController
 {
-    
-    //// Partie 78 : appeler un controller directement depuis twig /////////////////////////////////
     
     protected $categoryRepository;
 
@@ -27,9 +24,7 @@ class CategoryController extends AbstractController
     
     public function renderMenuList()
     {
-            //1. aller chercher les catégories dans la base de données
             $categories = $this->categoryRepository->findAll();
-            //2. renvoyer le rendu HTML sous la forme d'une reponse $this->render
             return $this->render('category/_menu.html.twig', ['categories'=> $categories]);
     }
 
@@ -38,10 +33,8 @@ class CategoryController extends AbstractController
      */
 
     public function create(Request $request, EntityManagerInterface $em, SluggerInterface $slugger)
-
     {
-
-        
+      
         $category = new Category;
 
         $form = $this->createForm(CategoryType::class, $category);
@@ -66,10 +59,11 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/admin/category/{id}/edit", name="category_edit")
+     * @Route("/admin/category/{id}/edit", name="category_edit") 
      */
     public function edit($id, CategoryRepository $categoryRepository, Request $request, EntityManagerInterface $em, SluggerInterface $slugger)
     {
+        
         $category = $categoryRepository->find($id);
 
         if (!$category) {

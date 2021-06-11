@@ -1,11 +1,16 @@
 # My-little-store
 ***
 Projet en développement d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. L'objectif est de créer une solution permettant de créer, modifier, afficher des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
+Warnings : 
+Les catégories de produits dans le menu ne sont pas foncitonnelles car pas dynamisées encore.
+Le lien d'inscription n'est pas encore effectif, c'est normal aussi.
+Mais les login  et logout sont effectifs avec un user admin@gmail.com et mot de passe "password" - rappel : c'est une app fictive
+ou avec un user simple user0@gmail.com et mot de passe, sans surprise "password"
 ***
 ## Installation du projet en local depuis Github
 * modifier le fichier .env pour mettre à jour la connexion avec la bdd avec les paramètres de votre installation locale (type de base, user et mot de passe)
-* créer la base de données à l'aide de la commande php bin/console doctrine:database:create
-* créer les tables et schémas de la base de données avec la commande php bin/console make:migration, et php bin/console doctrine:migrations:migrate pour la mise à jour de la base avec les données produits et catégories
+* créer la base de données à l'aide de la commande php bin/console doctrine:database:create et les tables et schémas de la base de données  avec la commande php bin/console make:migration, et php bin/console doctrine:migrations:migrate pour avoir les données produits, catégories et users.  
+* ou injecter le fichier sql de la bdd en cas de problème de migrations.
 * faire la commande composer install pour installer les paquets du fichier composer.json
 ***
 ## Vue des principales fonctionnalités et composants mis en place
@@ -19,7 +24,10 @@ Projet en développement d'une simulation de boutique en ligne construite en Sym
 * DataTransformer
 * Validation des données via le composant Validator
 * Espace de nom Constraints (Assert)
+* Composant Security - UserInterface - Création d'un authenticator spécifique - paramétrage de l'authenticator "form_login" de Symfony
+* Formulaire de connexion
+* AuthenticationUtils
+* Création d'un Voter CategoryVoter - pour démonstration unniquement - pour modification d'une catégorie en fonction de l'utilisateur créateur de la catégorie (commenté dans le CategoryController, puisqu'on se base en réalité sur un rôle ROLE_ADMIN)
 ***
 ### Nota Bene
-Certaines interfaces et classes ont délibérément été laissées dans la liste des importations, même si elles ne sont pas utilisées dans les contrôleurs concernés, pour laisser une trace des services utilisés et connus dans des version antérieures des fichiers. Le code ayant ensuite été refactorisé à plusieurs occasions, pour se rapprocher des best practices, certaines portions de code faisant appel à ces classes et interfaces ont été soit commentées soit retirées. Si les use ont été maintenus, en revanche, c'est essentiellement dans le but d'informer sur les services vus et connus des composants de Symfony ou de librairies, pour chaque contrôleur.
-
+Certaines interfaces et classes ont pû être délibérément laissées dans la liste des importations, même si elles ne sont pas utilisées dans les contrôleurs concernés, pour conserver une trace des services utilisés.
