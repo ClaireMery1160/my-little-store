@@ -27,7 +27,8 @@ ou avec un user simple user0@gmail.com et mot de passe, sans surprise "password"
 * Composant Security - UserInterface - Création d'un authenticator spécifique - paramétrage de l'authenticator "form_login" de Symfony
 * Formulaire de connexion
 * AuthenticationUtils
-* Création d'un Voter CategoryVoter - pour démonstration unniquement - pour modification d'une catégorie en fonction de l'utilisateur créateur de la catégorie (commenté dans le CategoryController, puisqu'on se base en réalité sur un rôle ROLE_ADMIN)
+* Création d'un Voter CategoryVoter - pour démonstration uniquement - pour modification d'une catégorie en fonction de l'utilisateur créateur de la catégorie (dans CategoryController, on se base en réalité sur un rôle ROLE_ADMIN)
+* Création d'un cartController et d'un CartService pour les actions d'ajout / suppression / modification dans le panier
 ***
 ### Nota Bene
-Certaines interfaces et classes ont pû être délibérément laissées dans la liste des importations, même si elles ne sont pas utilisées dans les contrôleurs concernés, pour conserver une trace des services utilisés.
+Certaines fonctionnalités sont présentes pour démonstration uniquement, comme le CategoryVoter
