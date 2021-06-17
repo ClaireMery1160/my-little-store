@@ -22,7 +22,7 @@ class ProductController extends AbstractController
         $category = $categoryRepo->findOneBy([
             'slug' => $slug
         ]);
-        // IL faut prévoir la gestion d'erreur si la catégorie saise est erronée
+
         if (!$category) {
 
             throw $this->createNotFoundException("La catégorie demandée n'existe pas.");
@@ -80,7 +80,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/admin/product/{id}/edit", name = "product_edit")
+     * @Route("/admin/product/{id}/edit", name ="product_edit")
      */
     public function edit($id, ProductRepository $productRepository, Request $request, EntityManagerInterface $em)
     {
