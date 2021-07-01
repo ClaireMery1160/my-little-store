@@ -21,14 +21,17 @@ ou avec un user simple user0@gmail.com et mot de passe, sans surprise "password"
 * Le composant Form
 * Evénements de formulaires
 * Types de champs
-* DataTransformer
-* Validation des données via le composant Validator
-* Espace de nom Constraints (Assert)
+* DataTransformer - pour démonstration uniquement
+* Validation des données 
+* recours à l'space de nom Constraints (Assert)
 * Composant Security - UserInterface - Création d'un authenticator spécifique - paramétrage de l'authenticator "form_login" de Symfony
 * Formulaire de connexion
 * AuthenticationUtils
 * Création d'un Voter CategoryVoter - pour démonstration uniquement - pour modification d'une catégorie en fonction de l'utilisateur créateur de la catégorie (dans CategoryController, on se base en réalité sur un rôle ROLE_ADMIN)
 * Création d'un cartController et d'un CartService pour les actions d'ajout / suppression / modification dans le panier
+* Mise en place du processus de commande : création des entités Purchase, et PurchaseItem, liées aux entités Product et User
+* Intégration d'un formulaire de saisie d'informations de livraison et de confirmation de commande
+* Intégration d'une vue "Mes commandes"
 ***
 ### Nota Bene
 Certaines fonctionnalités sont présentes pour démonstration uniquement, comme le CategoryVoter

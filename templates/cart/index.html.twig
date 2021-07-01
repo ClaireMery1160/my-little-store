@@ -18,7 +18,9 @@
             </tr>
         </thead>
         <tbody>
+
             {% for item in items %}
+
             <tr>
                 <td>{{ item.product.name }}</td>
                 <td>{{ item.product.price }}</td>
@@ -33,7 +35,9 @@
                     <a href="{{path("cart_delete", {'id': item.product.id })}}" class="btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
+
             {% endfor %}
+
         </tbody>
         <tfoot>
             <tr>
@@ -42,8 +46,31 @@
             </tr>
         </tfoot>
     </table>
+    <hr>
+    
+        {% if app.user %}
+        
+        <h2>Pour comfirmer votre commande, veuillez remplir le formulaire </h2>
+
+        {{ form_start(confirmationForm, {'action': path('purchase_confirm')}) }}
+
+        {{ form_widget(confirmationForm) }}
+
+        <button class="btn btn-success">Je confirme ma commande!</button>
+
+        {{ form_end(confirmationForm)}}
+
+        {% else %}
+        <h2>Vous devez vous identifier pour comfirmer votre commande. </h2>
+        <a href="{{ path('security_login') }}" class="btn btn-success">connnexion</a>
+            <a href="#"  class="btn btn-success">créer un compte</a>
+        {% endif %}
+        <br>
+
     {% else %}
+
     <h2>Le panier est vide. </h2>
+
     {% endif %} 
 
 {% endblock %}
