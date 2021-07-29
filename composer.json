@@ -17,6 +17,7 @@
         "liorchamla/faker-prices": "^2.0",
         "mbezhanov/faker-provider-collection": "^2.0",
         "sensio/framework-extra-bundle": "^6.1",
+        "stripe/stripe-php": "^7.87",
         "symfony/console": "5.2.*",
         "symfony/debug-bundle": "5.2.*",
         "symfony/dotenv": "5.2.*",

@@ -1,11 +1,9 @@
 # My-little-store
 ***
-Projet en développement d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. L'objectif est de créer une solution permettant de créer, modifier, afficher des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
-Warnings : 
-Les catégories de produits dans le menu ne sont pas foncitonnelles car pas dynamisées encore.
-Le lien d'inscription n'est pas encore effectif, c'est normal aussi.
-Mais les login  et logout sont effectifs avec un user admin@gmail.com et mot de passe "password" - rappel : c'est une app fictive
-ou avec un user simple user0@gmail.com et mot de passe, sans surprise "password"
+Projet en développement d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. 
+L'objectif est de créer une solution permettant de créer, modifier, afficher, commander des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
+Le webdesign n'est pas ici l'objectf de la démonstration. Pour le layout, il a été simplement fait appel à un thème boostrap et à font awsome.
+Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  un user admin : admin@gmail.com  et mot de passe "password", et un simple user : user0@gmail.com et mot de passe "password".
 ***
 ## Installation du projet en local depuis Github
 * modifier le fichier .env pour mettre à jour la connexion avec la bdd avec les paramètres de votre installation locale (type de base, user et mot de passe)
@@ -34,4 +32,4 @@ ou avec un user simple user0@gmail.com et mot de passe, sans surprise "password"
 * Intégration d'une vue "Mes commandes"
 ***
 ### Nota Bene
-Certaines fonctionnalités sont présentes pour démonstration uniquement, comme le CategoryVoter
+Certaines fonctionnalités sont présentes pour démonstration uniquement, la fonctionnalité en elle-même n'étant pas requise, comme le CategoryVoter.
