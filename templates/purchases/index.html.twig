@@ -12,7 +12,7 @@
             <th>N° de commande</th>
             <th>Adresse de livraison</th>
             <th>Date de commande</th>
-            <th>produits</th>
+            <th>produits (prix unitaire)</th>
             <th>Total</th>
         </tr>
     </thead>
@@ -25,7 +25,7 @@
             <td>
                 <ul>
                     {% for item in purchase.purchaseItems %}
-                    <li>{{ item.quantity}} x {{ item.productName }}  {{ item.productPrice / 100}}€</li>
+                    <li>{{ item.quantity}} x {{ item.productName }}  ({{ item.productPrice / 100}}€)  </li>
                     {% endfor %}
                 </ul>
             </td>
