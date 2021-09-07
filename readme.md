@@ -20,16 +20,21 @@ Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  u
 * Evénements de formulaires
 * Types de champs
 * DataTransformer - pour démonstration uniquement
-* Validation des données 
-* recours à l'space de nom Constraints (Assert)
+* Validation des données - recours à l'space de nom Constraints (Assert)
 * Composant Security - UserInterface - Création d'un authenticator spécifique - paramétrage de l'authenticator "form_login" de Symfony
 * Formulaire de connexion
 * AuthenticationUtils
-* Création d'un Voter CategoryVoter - pour démonstration uniquement - pour modification d'une catégorie en fonction de l'utilisateur créateur de la catégorie (dans CategoryController, on se base en réalité sur un rôle ROLE_ADMIN)
+* Création d'un Voter CategoryVoter - pour démonstration uniquement - pour modification d'une catégorie en fonction des droits de l'utilisateur
 * Création d'un cartController et d'un CartService pour les actions d'ajout / suppression / modification dans le panier
-* Mise en place du processus de commande : création des entités Purchase, et PurchaseItem, liées aux entités Product et User
+* Mise en place du processus de commande : création d'entités Purchase, et PurchaseItem (commandes et lignes de commandes)
 * Intégration d'un formulaire de saisie d'informations de livraison et de confirmation de commande
 * Intégration d'une vue "Mes commandes"
+* Recours à l'API Stripe (en mode dev) pour la gestion des payements via Stripe  -pour tester les paiements, saisir 4242 4242 4242 4242 dans l'input voire la documentation Stripe pour plus d'informations) 
 ***
+### Prochaines fonctionnalités à venir :
+* Mise en place d'un subscriber pour l'envoi d'emails de confirmations de commandes
+* Création d'emails via Twig
+
+
 ### Nota Bene
-Certaines fonctionnalités sont présentes pour démonstration uniquement, la fonctionnalité en elle-même n'étant pas requise, comme le CategoryVoter.
+Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, la fonctionnalité en elle-même n'étant pas requise, comme le CategoryVoter, ou les fichiers dans DataTransformer.

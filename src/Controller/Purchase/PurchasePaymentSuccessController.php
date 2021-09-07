@@ -4,10 +4,12 @@ namespace App\Controller\Purchase;
 
 use App\Entity\Purchase;
 use App\Cart\CartService;
+use App\Event\PurchaseSuccessEvent;
 use App\Repository\PurchaseRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PurchasePaymentSuccessController extends AbstractController
@@ -16,7 +18,7 @@ class PurchasePaymentSuccessController extends AbstractController
      * @Route("purchase/terminate/{id}", name="purchase_payment_success")
      * @IsGranted("ROLE_USER")
      */   
-    public function success($id, PurchaseRepository $purchaseRepository, EntityManagerInterface $em, CartService $cartService)
+    public function success($id, PurchaseRepository $purchaseRepository, EntityManagerInterface $em, CartService $cartService, EventDispatcherInterface $dispatcher)
     {
         // 1. récupération de la commande
 
@@ -42,6 +44,9 @@ class PurchasePaymentSuccessController extends AbstractController
         // 3. vider le panier 
         $cartService->empty();
 
+        // 3bis Lancer un événement qui permet aux autres développeurs de réagir à la prise d'une commande
+        $purchaseEvent = new PurchaseSuccessEvent($purchase);
+        $dispatcher->dispatch($purchaseEvent, "purchase.success");
 
         // 4. message flash de succès et redirection
         $this->addFlash("success", "La commande a été confirmée et l'ordre de paiement a bien été transmis.");
