@@ -30,9 +30,11 @@ Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  u
 * Intégration d'un formulaire de saisie d'informations de livraison et de confirmation de commande
 * Intégration d'une vue "Mes commandes"
 * Recours à l'API Stripe (en mode dev) pour la gestion des payements via Stripe  -pour tester les paiements, saisir 4242 4242 4242 4242 dans l'input voire la documentation Stripe pour plus d'informations) 
+* Mise en place d'un subscriber pour l'envoi d'emails de confirmations de commande
+* Mise en place de Doctrine Lifecycle Callbacks pour automatiser la date de création des commandes et le montant total des commandes
+* Mise en place de Doctrine Entity Listeners pour automatiser la création des slugs des produits et catégories
 ***
 ### Prochaines fonctionnalités à venir :
-* Mise en place d'un subscriber pour l'envoi d'emails de confirmations de commandes
 * Création d'emails via Twig
 
 

@@ -27,8 +27,10 @@ class PurchasePersister
         //6. On lie la Purchase créée à l'utilisateur connecté
         $user = $this->security->getUser();
         $purchase->setUser($user);
-        $purchase->setPurchasedAt(new DateTime());
-        $purchase->setTotal($this->cartService->getTotal());
+
+        // $purchase->setTotal($this->cartService->getTotal());
+        // ligne ci-dessus remplacée par un callback ORM preflush
+        
         $this->em->persist($purchase);
 
         //7. On lie la Purchase aux produits qui sont dans le panier
