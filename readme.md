@@ -33,10 +33,8 @@ Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  u
 * Mise en place d'un subscriber pour l'envoi d'emails de confirmations de commande
 * Mise en place de Doctrine Lifecycle Callbacks pour automatiser la date de création des commandes et le montant total des commandes
 * Mise en place de Doctrine Entity Listeners pour automatiser la création des slugs des produits et catégories
+* Ajout du composant Symfony mailer pour l'envoi d'emails suite après une commande passée avec succès
 ***
-### Prochaines fonctionnalités à venir :
-* Création d'emails via Twig
-
 
 ### Nota Bene
 Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, la fonctionnalité en elle-même n'étant pas requise, comme le CategoryVoter, ou les fichiers dans DataTransformer.
