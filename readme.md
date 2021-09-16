@@ -1,13 +1,13 @@
 # My-little-store
 ***
-Projet en développement d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. 
-L'objectif est de créer une solution permettant de créer, modifier, afficher, commander des produits fictifs en recourant aux principaux composants de Symfony et quelques librairies externes.
-Le webdesign n'est pas ici l'objectf de la démonstration. Pour le layout, il a été simplement fait appel à un thème boostrap et à font awsome.
-Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  un user admin : admin@gmail.com  et mot de passe "password", et un simple user : user0@gmail.com et mot de passe "password".
+Projet de démonstration d'une simulation de boutique en ligne construite en Symfony 5 et PHP 7.4. 
+L'objectif est de créer une solution permettant de créer, modifier, afficher, commander des produits fictifs créés via une fixture en recourant aux principaux composants de Symfony et quelques librairies externes.
+Le webdesign n'est pas ici l'objectif de la démonstration. Pour le layout, il a été simplement fait appel à un thème boostrap et à font awsome.
+Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  un user admin : admin@gmail.com  et mot de passe "password", et un simple user : user0@gmail.com ou user1 à user4@gmail.com, et mot de passe "password" également.
 ***
 ## Installation du projet en local depuis Github
 * modifier le fichier .env pour mettre à jour la connexion avec la bdd avec les paramètres de votre installation locale (type de base, user et mot de passe)
-* créer la base de données à l'aide de la commande php bin/console doctrine:database:create et les tables et schémas de la base de données  avec la commande php bin/console make:migration, et php bin/console doctrine:migrations:migrate pour avoir les données produits, catégories et users.  
+* créer la base de données à l'aide de la commande php bin/console doctrine:database:create et les tables et schémas de la base de données  avec la commande php bin/console make:migration, et php bin/console doctrine:migrations:migrate. Pour avoir les données fictives des produits, catégories et users, lancer la fixture avec la commande php/bin console doctrine:fixture:load.
 * ou injecter le fichier sql de la bdd en cas de problème de migrations.
 * faire la commande composer install pour installer les paquets du fichier composer.json
 ***
@@ -34,6 +34,7 @@ Pour y accéder, utiliser l'un ou l'autre des 2 types de comptes utilisateur:  u
 * Mise en place de Doctrine Lifecycle Callbacks pour automatiser la date de création des commandes et le montant total des commandes
 * Mise en place de Doctrine Entity Listeners pour automatiser la création des slugs des produits et catégories
 * Ajout du composant Symfony mailer pour l'envoi d'emails suite après une commande passée avec succès
+* Ajout d'un filtre twig de formatage des prix.
 ***
 
 ### Nota Bene
