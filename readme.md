@@ -20,7 +20,7 @@ Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre de
 * Evénements de formulaires
 * Types de champs
 * DataTransformer - pour démonstration uniquement
-* Validation des données - recours à l'space de nom Constraints (Assert)
+* Validation des données - recours à l'espace de nom Constraints (Assert)
 * Composant Security - UserInterface - Création d'un authenticator spécifique - paramétrage de l'authenticator "form_login" de Symfony
 * Formulaire de connexion
 * AuthenticationUtils
@@ -29,7 +29,7 @@ Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre de
 * Mise en place du processus de commande : création d'entités Purchase, et PurchaseItem (commandes et lignes de commandes)
 * Intégration d'un formulaire de saisie d'informations de livraison et de confirmation de commande
 * Intégration d'une vue "Mes commandes"
-* Recours à l'API Stripe (en mode dev) pour la gestion des payements via Stripe  -pour tester les paiements, saisir 4242 4242 4242 4242 dans l'input voire la documentation Stripe pour plus d'informations) 
+* Recours à l'API Stripe (en mode dev) pour la gestion des payements via Stripe  -pour tester les paiements, saisir 4242 4242 4242 4242 dans l'input (voire la documentation Stripe pour plus d'informations) 
 * Mise en place d'un subscriber pour l'envoi d'emails de confirmations de commande
 * Mise en place de Doctrine Lifecycle Callbacks pour automatiser la date de création des commandes et le montant total des commandes
 * Mise en place de Doctrine Entity Listeners pour automatiser la création des slugs des produits et catégories
