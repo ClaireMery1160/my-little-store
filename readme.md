@@ -8,7 +8,6 @@ Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre de
 ## Installation du projet en local depuis Github
 * modifier le fichier .env pour mettre à jour la connexion avec la bdd avec les paramètres de votre installation locale (type de base, user et mot de passe)
 * créer la base de données à l'aide de la commande php bin/console doctrine:database:create et les tables et schémas de la base de données  avec la commande php bin/console make:migration, et php bin/console doctrine:migrations:migrate. Pour avoir les données fictives des produits, catégories et users, lancer la fixture avec la commande php/bin console doctrine:fixtures:load.
-* ou injecter le fichier sql de la bdd en cas de problème de migrations.
 * faire la commande composer install pour installer les paquets du fichier composer.json
 ***
 ## Vue des principales fonctionnalités et composants mis en place
