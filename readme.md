@@ -33,8 +33,8 @@ Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre de
 * Mise en place de Doctrine Lifecycle Callbacks pour automatiser la date de création des commandes et le montant total des commandes
 * Mise en place de Doctrine Entity Listeners pour automatiser la création des slugs des produits et catégories
 * Ajout du composant Symfony mailer pour l'envoi d'emails suite après une commande passée avec succès
-* Ajout d'un filtre twig de formatage des prix.
+* Ajout d'un filtre twig pour le formatage des prix.
 ***
 
 ### Nota Bene
-Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, la fonctionnalité en elle-même n'étant pas requise, comme le CategoryVoter, ou les fichiers dans DataTransformer.
+Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, c'est par exemple le cas du fichier CategoryVoter, ou les fichiers dans DataTransformer.
