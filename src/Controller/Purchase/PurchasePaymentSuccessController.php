@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Controller\Purchase;
+namespace App\Controller\Purchase;
 
-use app\Entity\Purchase;
-use app\Cart\CartService;
-use app\Event\PurchaseSuccessEvent;
-use app\Repository\PurchaseRepository;
+use App\Entity\Purchase;
+use App\Cart\CartService;
+use App\Event\PurchaseSuccessEvent;
+use App\Repository\PurchaseRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;

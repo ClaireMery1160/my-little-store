@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Entity;
+namespace App\Entity;
 
-use app\Repository\PurchaseItemRepository;
+use App\Repository\PurchaseItemRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

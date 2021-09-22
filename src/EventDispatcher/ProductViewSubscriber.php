@@ -1,9 +1,9 @@
 <?php
 
-namespace app\EventDispatcher;
+namespace App\EventDispatcher;
 
 use Psr\Log\LoggerInterface;
-use app\Event\ProductViewEvent;
+use App\Event\ProductViewEvent;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Address;

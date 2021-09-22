@@ -1,10 +1,10 @@
 <?php
 
-namespace app\Controller;
+namespace App\Controller;
 
-use app\Entity\Category;
-use app\Form\CategoryType;
-use app\Repository\CategoryRepository;
+use App\Entity\Category;
+use App\Form\CategoryType;
+use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;

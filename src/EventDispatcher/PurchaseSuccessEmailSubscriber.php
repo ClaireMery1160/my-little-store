@@ -1,11 +1,11 @@
 <?php
 
-namespace app\EventDispatcher;
+namespace App\EventDispatcher;
 
-use app\Entity\User;
-use app\Entity\Purchase;
+use App\Entity\User;
+use App\Entity\Purchase;
 use Psr\Log\LoggerInterface;
-use app\Event\PurchaseSuccessEvent;
+use App\Event\PurchaseSuccessEvent;
 use Symfony\Component\Mime\Address;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\MailerInterface;

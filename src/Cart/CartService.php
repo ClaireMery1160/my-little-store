@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Cart;
+namespace App\Cart;
 
-use app\Repository\ProductRepository;
+use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 

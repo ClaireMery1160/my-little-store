@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Purchase;
+namespace App\Purchase;
 
-use app\Cart\CartService;
+use App\Cart\CartService;
 use DateTime;
-use app\Entity\Purchase;
-use app\Entity\PurchaseItem;
+use App\Entity\Purchase;
+use App\Entity\PurchaseItem;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\Security;
 

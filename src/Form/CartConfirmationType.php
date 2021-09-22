@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Form;
+namespace App\Form;
 
-use app\Entity\Purchase;
+use App\Entity\Purchase;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
