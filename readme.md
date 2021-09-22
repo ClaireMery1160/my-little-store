@@ -37,4 +37,4 @@ Pour accéder aux fonctionnalités de l'application, utiliser l'un ou l'autre de
 ***
 
 ### Nota Bene
-Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, c'est par exemple le cas du fichier CategoryVoter, ou les fichiers dans DataTransformer.
+Certaines fonctionnalités ou fichiers sont présents pour démonstration uniquement, c'est par exemple le cas du fichier CategoryVoter.
