@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Event;
+namespace app\Event;
 
 
-use App\Entity\Purchase;
+use app\Entity\Purchase;
 use Symfony\Contracts\EventDispatcher\Event;
 
 Class PurchaseSuccessEvent extends Event

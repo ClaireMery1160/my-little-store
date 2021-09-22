@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Doctrine\Listener;
+namespace app\Doctrine\Listener;
 
-use App\Entity\Category;
+use app\Entity\Category;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Symfony\Component\String\Slugger\SluggerInterface;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace app\Controller;
 
-use App\Repository\ProductRepository;
+use app\Repository\ProductRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 

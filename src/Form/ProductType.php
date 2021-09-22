@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Form;
+namespace app\Form;
 
-use App\Entity\Product;
-use App\Entity\Category;
+use app\Entity\Product;
+use app\Entity\Category;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Cart;
+namespace app\Cart;
 
-use App\Entity\Product;
+use app\Entity\Product;
 
 class CartItem
 {

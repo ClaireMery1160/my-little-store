@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller\Purchase;
+namespace app\Controller\Purchase;
 
-use App\Entity\Purchase;
-use App\Stripe\StripeService;
-use App\Repository\PurchaseRepository;
+use app\Entity\Purchase;
+use app\Stripe\StripeService;
+use app\Repository\PurchaseRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controller\Purchase;
+namespace app\Controller\Purchase;
 
 use DateTime;
-use App\Entity\Purchase;
-use App\Cart\CartService;
-use App\Entity\PurchaseItem;
-use App\Form\CartConfirmationType;
-use App\Purchase\PurchasePersister;
+use app\Entity\Purchase;
+use app\Cart\CartService;
+use app\Entity\PurchaseItem;
+use app\Form\CartConfirmationType;
+use app\Purchase\PurchasePersister;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;

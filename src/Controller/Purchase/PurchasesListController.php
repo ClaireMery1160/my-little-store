@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Purchase;
+namespace app\Controller\Purchase;
 
-use App\Entity\User;
+use app\Entity\User;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

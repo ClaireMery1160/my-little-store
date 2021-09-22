@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controller;
+namespace app\Controller;
 
-use App\Entity\Product;
-use App\Form\ProductType;
-use App\Event\ProductViewEvent;
-use App\Repository\ProductRepository;
-use App\Repository\CategoryRepository;
+use app\Entity\Product;
+use app\Form\ProductType;
+use app\Event\ProductViewEvent;
+use app\Repository\ProductRepository;
+use app\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;

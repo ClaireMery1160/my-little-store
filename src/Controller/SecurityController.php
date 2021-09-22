@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace app\Controller;
 
-use App\Form\LoginType;
+use app\Form\LoginType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;

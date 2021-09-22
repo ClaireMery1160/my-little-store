@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Stripe;
+namespace app\Stripe;
 
-use App\Entity\Purchase;
+use app\Entity\Purchase;
 
 
 class StripeService {

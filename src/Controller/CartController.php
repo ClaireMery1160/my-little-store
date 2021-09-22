@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace app\Controller;
 
-use App\Cart\CartService;
+use app\Cart\CartService;
 use App\Form\CartConfirmationType;
 use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Request;

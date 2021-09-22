@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace app\Repository;
 
-use App\Entity\PurchaseItem;
+use app\Entity\PurchaseItem;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

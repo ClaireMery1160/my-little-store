@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Entity;
+namespace app\Entity;
 
 use DateTime;
-use App\Entity\PurchaseItem;
+use app\Entity\PurchaseItem;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\PreFlush;
 use Doctrine\ORM\Mapping\PrePersist;
-use App\Repository\PurchaseRepository;
+use app\Repository\PurchaseRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
 use Doctrine\Common\Collections\ArrayCollection;

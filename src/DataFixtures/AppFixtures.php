@@ -1,13 +1,13 @@
 <?php
 
-namespace App\DataFixtures;
+namespace app\DataFixtures;
 
 use Faker\Factory;
-use App\Entity\User;
-use App\Entity\Product;
-use App\Entity\Category;
-use App\Entity\Purchase;
-use App\Entity\PurchaseItem;
+use app\Entity\User;
+use app\Entity\Product;
+use app\Entity\Category;
+use app\Entity\Purchase;
+use app\Entity\PurchaseItem;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\String\Slugger\SluggerInterface;
