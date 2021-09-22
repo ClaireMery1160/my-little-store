@@ -16,13 +16,13 @@ class LoginType extends AbstractType
             ->add('email', EmailType::class, [
                 'label'=>'adresse email',
                 'attr'=>[
-                    'placeholder'=>'adresse email de connexion'
+                    'placeholder'=>'adresse test : user0@gmail.com ou admin@gmail.com'
                 ]
             ])
             ->add('password', PasswordType::class, [
                 'label'=>'mot de passe', 
                 'attr'=>[
-                    'placeholder'=>'mot de passe'
+                    'placeholder'=>'mot de passe de test: password'
                 ]
             ]);
     }
