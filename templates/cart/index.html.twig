@@ -50,7 +50,7 @@
     
         {% if app.user %}
         
-        <h2>Pour comfirmer votre commande, veuillez remplir le formulaire </h2>
+        <h2>Pour confirmer votre commande, veuillez remplir le formulaire </h2>
 
         {{ form_start(confirmationForm, {'action': path('purchase_confirm')}) }}
 
@@ -61,9 +61,8 @@
         {{ form_end(confirmationForm)}}
 
         {% else %}
-        <h2>Vous devez vous identifier pour comfirmer votre commande. </h2>
+        <h2>Vous devez vous identifier pour confirmer votre commande. </h2>
         <a href="{{ path('security_login') }}" class="btn btn-success">connnexion</a>
-            <a href="#"  class="btn btn-success">créer un compte</a>
         {% endif %}
         <br>
 

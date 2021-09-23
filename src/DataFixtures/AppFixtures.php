@@ -74,10 +74,10 @@ class AppFixtures extends Fixture
 
             $manager->persist($category);
 
-            //Pour chaque categorie, je vais créer un nombre random entre 3 et 8 produits : 
+            //Pour chaque categorie, je vais créer un nombre random entre 4 et 8 produits : 
             $products=[];
 
-            for ($p = 0; $p < mt_rand(3, 8); $p++) {
+            for ($p = 0; $p < mt_rand(4, 8); $p++) {
                 $product = new Product;
                 $product->setName($faker->productName($faker))
                     ->setprice($faker->price(4000, 20000))

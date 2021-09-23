@@ -1,0 +1,104 @@
+/* COLOR PALETTE 
+credit : canva.com/color-palettes/pastel-appeal
+*/
+:root {
+    --blue-green:#00B7AF;
+    --peach:#FFD8C0;
+    --tiffany-blue:#A1DBE5;
+    --rose-quartz:#F7D8D9;
+    --light-grey:#868e96;
+    --dark-grey:#000000cc;
+}
+
+/* NAVBAR  */
+.navbar{
+    position: sticky!important;
+    position: -webkit-sticky!important;
+    top:0px;
+    z-index:100;
+}
+
+.navbar-brand {
+    font-family: 'Birthstone Bounce', cursive;
+    font-size: 1.35rem;
+}
+
+.bg-light.rose-quartz {
+    background-color: var(--rose-quartz)!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark-grey)!important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--light-grey)!important;
+}
+
+/* BUTTONS */
+.btn-success{
+    background-color: var(--rose-quartz)!important;
+    border-color:var(--blue-green)!important;
+    color:var(--blue-green)!important;
+} 
+
+.btn-success:hover{
+    background-color: var(--peach)!important;
+    color: var(--blue-green)!important;
+    border-color: var(--peach)!important;
+}
+
+.btn-primary, .btn-primary:active{
+    background-color: var(--blue-green)!important;
+    border-color:var(--blue-green)!important;
+}
+
+.btn-primary:hover{
+    background-color:#fff!important;
+    color:var(--blue-green)!important;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #cc3f5e;
+    border-color: #cc3f5e;
+}
+
+.badge-info {
+    color:rgba(0,0,0,.9)!important;
+    background-color: #a1dbe5!important;
+}
+
+/* BACKGROUND */
+.bg-primary, .bg-success, .bg-warning{
+    color: var(--dark-grey)!important;
+}
+
+.bg-primary {
+    background-color: var(--blue-green)!important;
+}
+
+.bg-success {
+    background-color: var(--rose-quartz)!important;
+}
+
+.bg-warning {
+    background-color: var(--tiffany-blue)!important;
+}
+
+/* BREADCRUMB*/
+.breadcrumb{
+background-color: var(--peach)!important;
+}
+
+.breadcrumb-item a{
+    color: var(--blue-green)!important;
+}
+
+/*ALERTS */
+
+.alert-success {
+    color: var(--blue-green)!important;
+    background-color: var(--rose-quartz)!important;
+    border-color:var(--rose-quartz)!important;
+}

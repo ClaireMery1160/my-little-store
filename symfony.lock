@@ -175,6 +175,9 @@
             "./public/.htaccess"
         ]
     },
+    "symfony/asset": {
+        "version": "v5.2.12"
+    },
     "symfony/cache": {
         "version": "v5.2.6"
     },

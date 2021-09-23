@@ -28,7 +28,7 @@
 		<div class="row">
 			<div class="col-4"><img class="img-fluid" src="{{ product.mainPicture }}" alt="image de {{ product.name }}"></div>
 			<div class="col">
-				<span class="badge badge-primary">{{ product.category.name }}</span>
+				<span class="badge badge-info">{{ product.category.name }}</span>
 				<p>{{ product.shortDescription }}</p>
 				<a href="{{ path('cart_add', {'id': product.id})}}" class="btn btn-success btn-lg">
 					<i class="fas fa-shopping-cart"></i>
